@@ -1,0 +1,1282 @@
+[
+    {
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "_command",
+                "type": "string"
+            }
+        ],
+        "name": "checkSpell",
+        "outputs": [
+            {
+                "internalType": "bool",
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "stateMutability": "pure",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256[3]",
+                "name": "spell_ids",
+                "type": "uint256[3]"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_salt",
+                "type": "uint256"
+            }
+        ],
+        "name": "chooseRandomSpell",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "luck1",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "luck2",
+                "type": "uint256"
+            }
+        ],
+        "name": "defineLowerRandomLimit",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "rand_low_1",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "rand_low_2",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "pure",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256[7]",
+                "name": "rooster",
+                "type": "uint256[7]"
+            },
+            {
+                "internalType": "uint256[3]",
+                "name": "itemIds",
+                "type": "uint256[3]"
+            }
+        ],
+        "name": "equipItems",
+        "outputs": [
+            {
+                "internalType": "uint256[7]",
+                "name": "",
+                "type": "uint256[7]"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "roosterId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256[3]",
+                "name": "itemIds",
+                "type": "uint256[3]"
+            }
+        ],
+        "name": "fairSumForArenaQueue",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "commandString",
+                "type": "string"
+            }
+        ],
+        "name": "getCommands",
+        "outputs": [
+            {
+                "internalType": "string[]",
+                "name": "",
+                "type": "string[]"
+            }
+        ],
+        "stateMutability": "pure",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "components": [
+                    {
+                        "components": [
+                            {
+                                "internalType": "uint256",
+                                "name": "attack",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "defence",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "health",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "speed",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "luck",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "winsCounter",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "birthTime",
+                                "type": "uint256"
+                            }
+                        ],
+                        "internalType": "struct Battle_Data.Rooster",
+                        "name": "r1",
+                        "type": "tuple"
+                    },
+                    {
+                        "components": [
+                            {
+                                "internalType": "uint256",
+                                "name": "attack",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "defence",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "health",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "speed",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "luck",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "winsCounter",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "birthTime",
+                                "type": "uint256"
+                            }
+                        ],
+                        "internalType": "struct Battle_Data.Rooster",
+                        "name": "r2",
+                        "type": "tuple"
+                    },
+                    {
+                        "internalType": "int256",
+                        "name": "hp_1",
+                        "type": "int256"
+                    },
+                    {
+                        "internalType": "int256",
+                        "name": "hp_2",
+                        "type": "int256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "rnd_low_1",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "rnd_low_2",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "ankhItemId",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "crit_1",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "crit_2",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "spellBoost_1",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "spellWard_1",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "spellBoost_2",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "spellWard_2",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "sleepCounter_1",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "sleepCounter_2",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "weaponBreak",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "armorBreak",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "vampiricWeapon_1",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "vampiricWeapon_2",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "vampiricArmor_1",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "vampiricArmor_2",
+                        "type": "bool"
+                    }
+                ],
+                "internalType": "struct Battle_Data.RoundData",
+                "name": "_current",
+                "type": "tuple"
+            }
+        ],
+        "name": "getRoundCriticals",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "crit_1",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "crit_2",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_timestamp",
+                "type": "uint256"
+            }
+        ],
+        "name": "getZodiac",
+        "outputs": [
+            {
+                "internalType": "uint8",
+                "name": "",
+                "type": "uint8"
+            }
+        ],
+        "stateMutability": "pure",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_itemId",
+                "type": "uint256"
+            }
+        ],
+        "name": "isAnkhEquipped",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256[5]",
+                "name": "r1_array",
+                "type": "uint256[5]"
+            },
+            {
+                "internalType": "uint256[5]",
+                "name": "r2_array",
+                "type": "uint256[5]"
+            }
+        ],
+        "name": "isFair",
+        "outputs": [
+            {
+                "internalType": "bool",
+                "name": "",
+                "type": "bool"
+            }
+        ],
+        "stateMutability": "pure",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256[7]",
+                "name": "enemyRooster",
+                "type": "uint256[7]"
+            },
+            {
+                "internalType": "uint256[3]",
+                "name": "itemIds",
+                "type": "uint256[3]"
+            }
+        ],
+        "name": "negativeEffects",
+        "outputs": [
+            {
+                "internalType": "uint256[7]",
+                "name": "",
+                "type": "uint256[7]"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_itemId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256[7]",
+                "name": "rooster",
+                "type": "uint256[7]"
+            }
+        ],
+        "name": "readItemBonus",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256[3]",
+                "name": "itemIds",
+                "type": "uint256[3]"
+            }
+        ],
+        "name": "readSpellBoostAndWard",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "components": [
+                    {
+                        "components": [
+                            {
+                                "internalType": "uint256",
+                                "name": "attack",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "defence",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "health",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "speed",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "luck",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "winsCounter",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "birthTime",
+                                "type": "uint256"
+                            }
+                        ],
+                        "internalType": "struct Battle_Data.Rooster",
+                        "name": "r1",
+                        "type": "tuple"
+                    },
+                    {
+                        "components": [
+                            {
+                                "internalType": "uint256",
+                                "name": "attack",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "defence",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "health",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "speed",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "luck",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "winsCounter",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "birthTime",
+                                "type": "uint256"
+                            }
+                        ],
+                        "internalType": "struct Battle_Data.Rooster",
+                        "name": "r2",
+                        "type": "tuple"
+                    },
+                    {
+                        "internalType": "int256",
+                        "name": "hp_1",
+                        "type": "int256"
+                    },
+                    {
+                        "internalType": "int256",
+                        "name": "hp_2",
+                        "type": "int256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "rnd_low_1",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "rnd_low_2",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "ankhItemId",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "crit_1",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "crit_2",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "spellBoost_1",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "spellWard_1",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "spellBoost_2",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "spellWard_2",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "sleepCounter_1",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "sleepCounter_2",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "weaponBreak",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "armorBreak",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "vampiricWeapon_1",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "vampiricWeapon_2",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "vampiricArmor_1",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "vampiricArmor_2",
+                        "type": "bool"
+                    }
+                ],
+                "internalType": "struct Battle_Data.RoundData",
+                "name": "_current",
+                "type": "tuple"
+            },
+            {
+                "internalType": "uint256[4]",
+                "name": "weaponsAndArmors",
+                "type": "uint256[4]"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_salt",
+                "type": "uint256"
+            }
+        ],
+        "name": "roundCards",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "components": [
+                            {
+                                "internalType": "uint256",
+                                "name": "attack",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "defence",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "health",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "speed",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "luck",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "winsCounter",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "birthTime",
+                                "type": "uint256"
+                            }
+                        ],
+                        "internalType": "struct Battle_Data.Rooster",
+                        "name": "r1",
+                        "type": "tuple"
+                    },
+                    {
+                        "components": [
+                            {
+                                "internalType": "uint256",
+                                "name": "attack",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "defence",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "health",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "speed",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "luck",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "winsCounter",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "birthTime",
+                                "type": "uint256"
+                            }
+                        ],
+                        "internalType": "struct Battle_Data.Rooster",
+                        "name": "r2",
+                        "type": "tuple"
+                    },
+                    {
+                        "internalType": "int256",
+                        "name": "hp_1",
+                        "type": "int256"
+                    },
+                    {
+                        "internalType": "int256",
+                        "name": "hp_2",
+                        "type": "int256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "rnd_low_1",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "rnd_low_2",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "ankhItemId",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "crit_1",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "crit_2",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "spellBoost_1",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "spellWard_1",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "spellBoost_2",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "spellWard_2",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "sleepCounter_1",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "sleepCounter_2",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "weaponBreak",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "armorBreak",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "vampiricWeapon_1",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "vampiricWeapon_2",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "vampiricArmor_1",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "vampiricArmor_2",
+                        "type": "bool"
+                    }
+                ],
+                "internalType": "struct Battle_Data.RoundData",
+                "name": "",
+                "type": "tuple"
+            },
+            {
+                "internalType": "uint8",
+                "name": "",
+                "type": "uint8"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "components": [
+                    {
+                        "components": [
+                            {
+                                "internalType": "uint256",
+                                "name": "attack",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "defence",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "health",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "speed",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "luck",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "winsCounter",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "birthTime",
+                                "type": "uint256"
+                            }
+                        ],
+                        "internalType": "struct Battle_Data.Rooster",
+                        "name": "r1",
+                        "type": "tuple"
+                    },
+                    {
+                        "components": [
+                            {
+                                "internalType": "uint256",
+                                "name": "attack",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "defence",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "health",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "speed",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "luck",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "winsCounter",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "birthTime",
+                                "type": "uint256"
+                            }
+                        ],
+                        "internalType": "struct Battle_Data.Rooster",
+                        "name": "r2",
+                        "type": "tuple"
+                    },
+                    {
+                        "internalType": "int256",
+                        "name": "hp_1",
+                        "type": "int256"
+                    },
+                    {
+                        "internalType": "int256",
+                        "name": "hp_2",
+                        "type": "int256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "rnd_low_1",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "rnd_low_2",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "ankhItemId",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "crit_1",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "crit_2",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "spellBoost_1",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "spellWard_1",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "spellBoost_2",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "spellWard_2",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "sleepCounter_1",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "sleepCounter_2",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "weaponBreak",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "armorBreak",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "vampiricWeapon_1",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "vampiricWeapon_2",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "vampiricArmor_1",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "vampiricArmor_2",
+                        "type": "bool"
+                    }
+                ],
+                "internalType": "struct Battle_Data.RoundData",
+                "name": "_current",
+                "type": "tuple"
+            },
+            {
+                "internalType": "uint256",
+                "name": "spellId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint8",
+                "name": "activeRooster",
+                "type": "uint8"
+            },
+            {
+                "internalType": "uint256",
+                "name": "spellBoost",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "spellWard",
+                "type": "uint256"
+            }
+        ],
+        "name": "spellEffect",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "components": [
+                            {
+                                "internalType": "uint256",
+                                "name": "attack",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "defence",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "health",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "speed",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "luck",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "winsCounter",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "birthTime",
+                                "type": "uint256"
+                            }
+                        ],
+                        "internalType": "struct Battle_Data.Rooster",
+                        "name": "r1",
+                        "type": "tuple"
+                    },
+                    {
+                        "components": [
+                            {
+                                "internalType": "uint256",
+                                "name": "attack",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "defence",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "health",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "speed",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "luck",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "winsCounter",
+                                "type": "uint256"
+                            },
+                            {
+                                "internalType": "uint256",
+                                "name": "birthTime",
+                                "type": "uint256"
+                            }
+                        ],
+                        "internalType": "struct Battle_Data.Rooster",
+                        "name": "r2",
+                        "type": "tuple"
+                    },
+                    {
+                        "internalType": "int256",
+                        "name": "hp_1",
+                        "type": "int256"
+                    },
+                    {
+                        "internalType": "int256",
+                        "name": "hp_2",
+                        "type": "int256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "rnd_low_1",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "rnd_low_2",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "ankhItemId",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "crit_1",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "crit_2",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "spellBoost_1",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "spellWard_1",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "spellBoost_2",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "spellWard_2",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "sleepCounter_1",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "sleepCounter_2",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "weaponBreak",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "armorBreak",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "vampiricWeapon_1",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "vampiricWeapon_2",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "vampiricArmor_1",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "vampiricArmor_2",
+                        "type": "bool"
+                    }
+                ],
+                "internalType": "struct Battle_Data.RoundData",
+                "name": "",
+                "type": "tuple"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    }
+]

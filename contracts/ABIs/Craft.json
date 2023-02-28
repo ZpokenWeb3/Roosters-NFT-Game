@@ -1,0 +1,204 @@
+[
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "previousOwner",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "newOwner",
+                "type": "address"
+            }
+        ],
+        "name": "OwnershipTransferred",
+        "type": "event"
+    },
+    {
+        "inputs": [],
+        "name": "addressManagerAddress",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "chickenId1",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "chickenId2",
+                "type": "uint256"
+            }
+        ],
+        "name": "mixDoubleSacrifice",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "newItemId",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "mainItemId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "burnChickenId",
+                "type": "uint256"
+            }
+        ],
+        "name": "mixSacrificeChicken",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "mainItemId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "burnItemId",
+                "type": "uint256"
+            }
+        ],
+        "name": "mixWeaponOrArmor",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "itemId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "sprigId",
+                "type": "uint256"
+            }
+        ],
+        "name": "mixWithMintSprig",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "renounceOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_addressManagerAddress",
+                "type": "address"
+            }
+        ],
+        "name": "setAddressManager",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "SAME_TYPE_BONUS",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "WINS_BONUS",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "SACRIFICE_BONUS",
+                "type": "uint256"
+            }
+        ],
+        "name": "setSettings",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "uint256",
+                        "name": "SAME_TYPE_BONUS",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "WINS_BONUS",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "SACRIFICE_BONUS",
+                        "type": "uint256"
+                    }
+                ],
+                "internalType": "struct Craft.Settings",
+                "name": "",
+                "type": "tuple"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "newOwner",
+                "type": "address"
+            }
+        ],
+        "name": "transferOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    }
+]

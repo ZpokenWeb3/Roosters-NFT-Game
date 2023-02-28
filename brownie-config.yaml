@@ -1,0 +1,46 @@
+dependencies:
+  - OpenZeppelin/openzeppelin-contracts@4.8.1
+compiler:
+  solc:
+    version: 0.8.18
+    optimizer:
+      enabled: True
+      runs: 200
+    remappings:
+      - '@openzeppelin=OpenZeppelin/openzeppelin-contracts@4.8.1'
+dotenv: .env
+networks:
+  default: development
+  development:
+    verify: False
+    timeout: 120
+    cmd_settings:
+        port: 8545
+        gas_limit: 20000000
+        accounts: 20
+        chain_id: 1337
+  rinkeby:
+    eth_usd_price_feed: '0x8A753747A1Fa494EC906cE90E9f37563A8AF630e'
+    usdc_address : ''
+    verify: True
+  mainnet-fork-dev:
+    eth_usd_price_feed: '0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419'
+    verify: False
+  bsc-test:
+    usdc_address: '0xC01B253f5d6373cA3E661Bb9d1D6047d66DD38D1'
+    verify: False
+  ganache-local:
+    verify: False
+  bsc-main-fork:
+    verify: False
+  kovan:
+    usdc_address: '0x8C75a054Ca5Ba1F3a7FA22Aefa689655435DEb7D'
+    verify: True
+  mumbai:
+    usdc_address: '0x7592A72A46D3165Dcc7BF0802D70812Af19471B3'
+    verify: False
+    host: https://mainnet.infura.io/v3/${WEB3_INFURA_PROJECT_ID}
+wallets:
+  from_key: ${PRIVATE_KEY}
+  from_key2: ${PRIVATE_KEY2}
+  from_key3: ${PRIVATE_KEY3}

@@ -1,0 +1,745 @@
+[
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_battleLibAddress",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "fightId",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "timestamp",
+                "type": "uint256"
+            }
+        ],
+        "name": "FightCanceled",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "fightId",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "winnerRoosterId",
+                "type": "uint256"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "uint256",
+                        "name": "stakeId1",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "stakeId2",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "timestamp",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "winnerStakeId",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "loserStakeId",
+                        "type": "uint256"
+                    }
+                ],
+                "indexed": false,
+                "internalType": "struct NFT_Rooster_Battle.FightData",
+                "name": "fightData",
+                "type": "tuple"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "uint256",
+                        "name": "hp_1",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "hp_2",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "spell_id_1",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "spell_id_2",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "crit_1",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "crit_2",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint8",
+                        "name": "card",
+                        "type": "uint8"
+                    }
+                ],
+                "indexed": false,
+                "internalType": "struct NFT_Rooster_Battle.FightStory[]",
+                "name": "fightStory",
+                "type": "tuple[]"
+            }
+        ],
+        "name": "FightEvent",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "uint256",
+                "name": "fightId",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "rooster1Id",
+                "type": "uint256"
+            },
+            {
+                "indexed": false,
+                "internalType": "uint256",
+                "name": "rooster2Id",
+                "type": "uint256"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "uint256",
+                        "name": "attack",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "defence",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "health",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "speed",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "luck",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "winsCounter",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "birthTime",
+                        "type": "uint256"
+                    }
+                ],
+                "indexed": false,
+                "internalType": "struct Battle_Data.Rooster",
+                "name": "Rooster1Equipped",
+                "type": "tuple"
+            },
+            {
+                "components": [
+                    {
+                        "internalType": "uint256",
+                        "name": "attack",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "defence",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "health",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "speed",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "luck",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "winsCounter",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "birthTime",
+                        "type": "uint256"
+                    }
+                ],
+                "indexed": false,
+                "internalType": "struct Battle_Data.Rooster",
+                "name": "Rooster2Equipped",
+                "type": "tuple"
+            }
+        ],
+        "name": "FightEventRoosters",
+        "type": "event"
+    },
+    {
+        "anonymous": false,
+        "inputs": [
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "previousOwner",
+                "type": "address"
+            },
+            {
+                "indexed": true,
+                "internalType": "address",
+                "name": "newOwner",
+                "type": "address"
+            }
+        ],
+        "name": "OwnershipTransferred",
+        "type": "event"
+    },
+    {
+        "inputs": [],
+        "name": "addressManagerAddress",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_fightId",
+                "type": "uint256"
+            }
+        ],
+        "name": "cancelFight",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "roosterId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256[3]",
+                "name": "itemIds",
+                "type": "uint256[3]"
+            },
+            {
+                "internalType": "uint256[3]",
+                "name": "spell_ids",
+                "type": "uint256[3]"
+            },
+            {
+                "internalType": "string",
+                "name": "commandString",
+                "type": "string"
+            }
+        ],
+        "name": "fightNow",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_stakeId",
+                "type": "uint256"
+            }
+        ],
+        "name": "findOponentInArenaQueue",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_fightId",
+                "type": "uint256"
+            }
+        ],
+        "name": "getFightData",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "uint256",
+                        "name": "stakeId1",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "stakeId2",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "timestamp",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "winnerStakeId",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "loserStakeId",
+                        "type": "uint256"
+                    }
+                ],
+                "internalType": "struct NFT_Rooster_Battle.FightData",
+                "name": "",
+                "type": "tuple"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_stakeId",
+                "type": "uint256"
+            }
+        ],
+        "name": "getStakeData",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "uint256",
+                        "name": "roosterId",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "fightId",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "timestamp",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256[3]",
+                        "name": "itemIds",
+                        "type": "uint256[3]"
+                    },
+                    {
+                        "internalType": "uint256[3]",
+                        "name": "spell_ids",
+                        "type": "uint256[3]"
+                    },
+                    {
+                        "internalType": "address",
+                        "name": "ownerAddress",
+                        "type": "address"
+                    },
+                    {
+                        "internalType": "string[]",
+                        "name": "commands",
+                        "type": "string[]"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "isMirror",
+                        "type": "bool"
+                    }
+                ],
+                "internalType": "struct NFT_Rooster_Battle.StakeData",
+                "name": "",
+                "type": "tuple"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "userAddress",
+                "type": "address"
+            }
+        ],
+        "name": "getUserFights",
+        "outputs": [
+            {
+                "internalType": "uint256[]",
+                "name": "",
+                "type": "uint256[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "userAddress",
+                "type": "address"
+            }
+        ],
+        "name": "getUserStakes",
+        "outputs": [
+            {
+                "internalType": "uint256[]",
+                "name": "",
+                "type": "uint256[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_fightId",
+                "type": "uint256"
+            }
+        ],
+        "name": "initiateFight",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_fightId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_seed",
+                "type": "uint256"
+            }
+        ],
+        "name": "initiateFightWithSeed",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "owner",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "",
+                "type": "address"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "renounceOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "_addressManagerAddress",
+                "type": "address"
+            }
+        ],
+        "name": "setAddressManager",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "stakeId1",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "stakeId2",
+                "type": "uint256"
+            }
+        ],
+        "name": "setFight",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_FIGHT_DELAY",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_TIME_LIMIT",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "VAMPIRIC_WEAPON",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "VAMPIRIC_ARMOR",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "CANCEL_PRICE",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "ATTACK_THRESHOLD",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "MIRROR_ADVANTAGE",
+                "type": "uint256"
+            }
+        ],
+        "name": "setSettings",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "uint256",
+                        "name": "_FIGHT_DELAY",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "_TIME_LIMIT",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "VAMPIRIC_WEAPON",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "VAMPIRIC_ARMOR",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "CANCEL_PRICE",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "ATTACK_THRESHOLD",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "MIRROR_ADVANTAGE",
+                        "type": "uint256"
+                    }
+                ],
+                "internalType": "struct NFT_Rooster_Battle.Settings",
+                "name": "",
+                "type": "tuple"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_fightId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_seed",
+                "type": "uint256"
+            }
+        ],
+        "name": "simulateFightWithSeed",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "winnerStakeId",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "roosterId",
+                "type": "uint256"
+            },
+            {
+                "internalType": "uint256[3]",
+                "name": "itemIds",
+                "type": "uint256[3]"
+            },
+            {
+                "internalType": "uint256[3]",
+                "name": "spell_ids",
+                "type": "uint256[3]"
+            },
+            {
+                "internalType": "string",
+                "name": "commandString",
+                "type": "string"
+            }
+        ],
+        "name": "stakeRooster",
+        "outputs": [
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
+                "name": "newOwner",
+                "type": "address"
+            }
+        ],
+        "name": "transferOwnership",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "uint256",
+                "name": "_stakeId",
+                "type": "uint256"
+            }
+        ],
+        "name": "unstakeRoosterAndItems",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    }
+]
